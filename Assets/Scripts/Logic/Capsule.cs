@@ -18,6 +18,9 @@
             ObjectSpeed = 0.8f;
         }
 
+        /// <summary>
+        /// Object moving or rotation
+        /// </summary>
         public override void MoveRotation()
         {
             if (transform.localPosition.y > CurrentSpawn.TransformObject.position.y + _jumpBoundary && !_isChangeDirection)

@@ -51,6 +51,11 @@
         {
             Spawn spawn = TransformObjects.Find((x) => x.IsAvailable);
 
+            if (spawn == null)
+            {
+                GameManager.Instance.UIView.ShowSpawnOcupied();
+                return;
+            }
             var obj = _shootObjects.Find((y) => y.name.Contains(_type) && !y.gameObject.activeInHierarchy);
 
             obj.SetSpawnObject(spawn);
@@ -70,7 +75,7 @@
 
                 for (int j = 0; j < 10; j++)
                 {
-                   GameObject obj = Instantiate(prefab, _objectPoolContainer);
+                   Instantiate(prefab, _objectPoolContainer);
                 }
             }
             _shootObjects = new List<ShootObject>(_objectPoolContainer.GetComponentsInChildren<ShootObject>(true));

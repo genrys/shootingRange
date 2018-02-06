@@ -11,6 +11,12 @@
         public Button SpawnButtonComponent;
         public Image ViewImageComponent;
 
+        /// <summary>
+        /// Initialize components of spawn object.
+        /// </summary>
+        /// <param name="_text">text</param>
+        /// <param name="action">Action</param>
+        /// <param name="sprite">sprite</param>
         public void Init(string _text, System.Action action, Sprite sprite)
         {
             AwardTextComponent.text = _text;

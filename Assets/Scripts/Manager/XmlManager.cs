@@ -16,6 +16,9 @@
         [SerializeField]
         private int _objectsCount;
 
+        /// <summary>
+        /// Init XML File
+        /// </summary>
         public void Init()
         {
             if (XmlData == null)
@@ -31,6 +34,10 @@
             Load(_path);
         }
 
+        /// <summary>
+        /// Save data to XML
+        /// </summary>
+        /// <param name="path">file path</param>
         public void Save(string path)
         {
             var serializer = new XmlSerializer(typeof(SpawnObjectsContainer));
@@ -42,6 +49,10 @@
             }
         }
 
+        /// <summary>
+        /// Load data from XML
+        /// </summary>
+        /// <param name="path">file path</param>
         public void Load(string path)
         {
             var serializer = new XmlSerializer(typeof(SpawnObjectsContainer));
@@ -53,6 +64,10 @@
             }
         }
 
+        /// <summary>
+        /// Randomize object to xml File
+        /// </summary>
+        /// <param name="count">Count of objects</param>
         private void ObjectsRandomzie(int count)
         {
             Container.Objects = new List<SpawnObject>();

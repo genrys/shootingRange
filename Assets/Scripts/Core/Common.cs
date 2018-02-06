@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
     using System.Xml.Serialization;
-    using UnityEngine;
 
     #region ENUMS
 
@@ -12,6 +11,14 @@
         CUBE,
         CIRCLE,
         CAPSULE
+    }
+
+    public enum ClipType
+    {
+        WOW_SHOOT,
+        GOOD_SHOOT,
+        WRONG_SHOOT,
+        MAIN_CLIP
     }
 
     #endregion

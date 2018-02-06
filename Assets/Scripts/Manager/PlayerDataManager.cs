@@ -32,10 +32,5 @@
         {
             PlayerPrefs.SetInt(PlayerScore, PlayerPrefs.GetInt(PlayerScore) + data);
         }
-
-        public void InitEvents()
-        {
-            LoadDataFromPrefs = delegate { };
-        }
     }
 }

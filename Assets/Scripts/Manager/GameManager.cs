@@ -10,17 +10,20 @@
 
         public XmlManager XmlManager;
         public SpawnManager SpawnManager;
-        public UIViewManager UIViewManager;
         public PlayerDataManager PlayerDataManager;
+        public AudioManager AudioManager;
 
+        public UIView UIView;
         public Weapon WeaponOnject;
-
 
         private void Start()
         {
             Initialize();
         }
 
+        /// <summary>
+        /// Initialize all necessary scripts.
+        /// </summary>
         private void Initialize()
         {
             Instance = this;
@@ -29,23 +32,27 @@
             SpawnManager.Init();
             SpawnManager.InitExtendableObjectPool();
             WeaponOnject.InitEvents();
-
+            AudioManager.Init();
             EventsSubscribe();
 
             PlayerDataManager.LoadData();
         }
 
+        /// <summary>
+        /// Subscribe on events.
+        /// </summary>
         private void EventsSubscribe()
         {
-            WeaponOnject.SuccesfullShootUI += UIViewManager.ShowWowImage;
-            WeaponOnject.SuccesfullShootParticle += UIViewManager.ShowWowParticle;
-            PlayerDataManager.LoadDataFromPrefs += UIViewManager.UpdateScore;
+            WeaponOnject.SuccesfullShootUI += UIView.ShowWowImage;
+            WeaponOnject.SuccesfullShootParticle += UIView.ShowWowParticle;
+            PlayerDataManager.LoadDataFromPrefs += UIView.UpdateScore;
         }
 
         private void OnDestroy()
         {
-            WeaponOnject.SuccesfullShootUI -= UIViewManager.ShowWowImage;
-            WeaponOnject.SuccesfullShootParticle -= UIViewManager.ShowWowParticle;
+            WeaponOnject.SuccesfullShootUI -= UIView.ShowWowImage;
+            WeaponOnject.SuccesfullShootParticle -= UIView.ShowWowParticle;
+            PlayerDataManager.LoadDataFromPrefs -= UIView.UpdateScore;
         }
     }
 }
