@@ -4084,9 +4084,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 951253303}
   - {fileID: 1980174306}
   - {fileID: 2116858067}
-  - {fileID: 951253303}
   - {fileID: 1904019289}
   - {fileID: 1542406590}
   - {fileID: 961037261}
@@ -4213,6 +4213,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 951253303}
+  - component: {fileID: 951253304}
   m_Layer: 0
   m_Name: PlayerDataManager
   m_TagString: Untagged
@@ -4231,8 +4232,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 819878091}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951253304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951253302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8772937a92553104d9eac10c347a34ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerScore: PlayerScore
 --- !u!1 &961037260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,6 +4286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b78ab6a8228fe4bb5e75b9decac367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreText: {fileID: 688068915}
   WowImage: {fileID: 681465141}
   SuccesfulParticleEffect: {fileID: 177630900}
 --- !u!1 &1013904154
@@ -5250,6 +5264,7 @@ MonoBehaviour:
   XmlManager: {fileID: 2116858068}
   SpawnManager: {fileID: 1980174307}
   UIViewManager: {fileID: 961037262}
+  PlayerDataManager: {fileID: 951253304}
   WeaponOnject: {fileID: 2132840718}
 --- !u!1 &1598579729
 GameObject:
@@ -5871,7 +5886,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 819878091}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1980174307
 MonoBehaviour:
@@ -5950,7 +5965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 819878091}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2116858068
 MonoBehaviour:

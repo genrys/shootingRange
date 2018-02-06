@@ -2,9 +2,11 @@
 {
     using System;
     using UnityEngine;
+    using UnityEngine.UI;
 
     public class UIViewManager : MonoBehaviour
     {
+        public Text ScoreText;
         public Animator WowImage;
         public ParticleSystem SuccesfulParticleEffect;
 
@@ -21,14 +23,9 @@
             SuccesfulParticleEffect.Play();
         }
 
-        public void UpdateScore()
+        public void UpdateScore(string score)
         {
-
-        }
-
-        public void InitScore()
-        {
-
+            ScoreText.text = score;
         }
     }
 }

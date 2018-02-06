@@ -48,6 +48,8 @@
             {
                 ShootObject obj = currentShoot[i].collider.GetComponent<ShootObject>();
                 ShowCongratulation(obj.CurrentSpawn.TransformObject);
+                GameManager.Instance.PlayerDataManager.SaveData(obj.AwardForObject);
+                GameManager.Instance.PlayerDataManager.LoadData();
                 GameManager.Instance.SpawnManager.DeactivatePoolObject(obj, obj.CurrentSpawn);
             }
         }

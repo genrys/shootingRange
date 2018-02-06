@@ -3,43 +3,43 @@
   <Objects>
     <SpawnObject>
       <Type>CIRCLE</Type>
-      <Award>677</Award>
+      <Award>687</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CIRCLE</Type>
-      <Award>79</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CIRCLE</Type>
-      <Award>699</Award>
+      <Award>262</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CAPSULE</Type>
-      <Award>465</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CIRCLE</Type>
-      <Award>944</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CIRCLE</Type>
-      <Award>673</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CIRCLE</Type>
-      <Award>719</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CUBE</Type>
-      <Award>201</Award>
+      <Award>330</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CAPSULE</Type>
-      <Award>823</Award>
+      <Award>808</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CAPSULE</Type>
+      <Award>695</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CIRCLE</Type>
+      <Award>50</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CUBE</Type>
-      <Award>238</Award>
+      <Award>15</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>909</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CAPSULE</Type>
+      <Award>444</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>359</Award>
     </SpawnObject>
   </Objects>
 </SpawnObjectsCollection>
