@@ -1,1 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+<SpawnObjectsCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Objects>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>500</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CIRCLE</Type>
+      <Award>536</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CAPSULE</Type>
+      <Award>949</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>949</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CIRCLE</Type>
+      <Award>668</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>157</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>556</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CAPSULE</Type>
+      <Award>773</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>101</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CUBE</Type>
+      <Award>929</Award>
+    </SpawnObject>
+  </Objects>
+</SpawnObjectsCollection>

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964128, b: 0.5748171, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -558,6 +558,7 @@ Transform:
   - {fileID: 2116858067}
   - {fileID: 951253303}
   - {fileID: 1904019289}
+  - {fileID: 1542406590}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -875,7 +876,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1515132600}
   m_HandleRect: {fileID: 1515132599}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 11
   m_OnValueChanged:
@@ -1021,7 +1022,7 @@ GameObject:
   - component: {fileID: 1187542510}
   - component: {fileID: 1187542509}
   m_Layer: 5
-  m_Name: Content
+  m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1561,6 +1562,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1515132598}
+--- !u!1 &1542406589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1542406590}
+  - component: {fileID: 1542406591}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1542406590
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542406589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 819878091}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1542406591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542406589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5f6c5789da7944982e72d5bf0f3dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XmlManager: {fileID: 2116858068}
+  SpawnManager: {fileID: 1980174307}
 --- !u!1 &1598579729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,6 +2160,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1980174306}
+  - component: {fileID: 1980174307}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -2137,6 +2181,20 @@ Transform:
   m_Father: {fileID: 819878091}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1980174307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980174305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339c8a387222cf349934b4c3bf88edc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectPrefab: {fileID: 114567273076090334, guid: 9c1bf4cf1709fb643bf35aa60dfb8c2e,
+    type: 2}
+  _spawnObjectsContainer: {fileID: 1187542508}
 --- !u!1 &2116858066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,16 +2235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d5e29678ff1148abc9c4430b91ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Objects:
-  - Type: 0
-    Award: 100
-  - Type: 0
-    Award: 0
-  - Type: 1
-    Award: 500
-  - Type: 0
-    Award: 0
+  Container:
+    Objects: []
   XmlData: {fileID: 4900000, guid: c221d36c70cedfa4ba98f8d722f78e9e, type: 3}
+  _objectsCount: 10
 --- !u!1 &2118063481
 GameObject:
   m_ObjectHideFlags: 0

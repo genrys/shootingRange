@@ -1,48 +1,65 @@
-﻿namespace ShootingGallery.Manager 
+﻿namespace ShootingGallery.Manager
 {
     using Core;
+    using System.Collections.Generic;
     using System.IO;
     using System.Xml.Serialization;
     using UnityEngine;
 
-    [XmlRoot("SpawnObjectsCollection", Namespace= "ShootingGallery.Manager")]
     public class XmlManager : MonoBehaviour
     {
-        [XmlArray("Objects"), XmlArrayItem("SpawnObject")]
-        [SerializeField]
-        public SpawnObject[] Objects;
+        public SpawnObjectsContainer Container;
 
         public TextAsset XmlData;
 
-        private void Start()
-        {
-            Init();
-            print(Application.dataPath);
-            Save(Application.dataPath + "/Resources/XMLData.xml");
-        }
+        private string _path;
+        [SerializeField]
+        private int _objectsCount;
 
-        private void Init()
+        public void Init()
         {
             if (XmlData == null)
             {
                 XmlData = (TextAsset)Resources.Load("XMLData");
             }
+
+            _path = Application.dataPath + "/Resources/XMLData.xml";
+
+            ObjectsRandomzie(_objectsCount);
+
+            Save(_path);
+            Load(_path);
         }
 
         public void Save(string path)
         {
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("ShootingGallery", "ShootingGallery.Manager");
-            var serializer = new XmlSerializer(typeof(SpawnObject));
+            var serializer = new XmlSerializer(typeof(SpawnObjectsContainer));
+
             using (StreamWriter stream = new StreamWriter(path, false))
             {
-                serializer.Serialize(stream, this,ns);
+                serializer.Serialize(stream, Container);
+                stream.Close();
             }
         }
 
-        private void FillXmlData()
+        public void Load(string path)
         {
+            var serializer = new XmlSerializer(typeof(SpawnObjectsContainer));
 
+            using (StreamReader stream = new StreamReader(path, false))
+            {
+               Container = serializer.Deserialize(stream) as SpawnObjectsContainer;
+                stream.Close();
+            }
+        }
+
+        private void ObjectsRandomzie(int count)
+        {
+            Container.Objects = new List<SpawnObject>();
+            for (int i = 0; i < count; i++)
+            {
+                Container.Objects.Add(new SpawnObject() { Type = (ObjectType)Random.Range(0, 3), Award = Random.Range(0, 1000) });
+            }
         }
     }
 }

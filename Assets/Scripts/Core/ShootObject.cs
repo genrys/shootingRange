@@ -26,7 +26,7 @@
             MoveRotation();
         }
 
-        private void Start()
+         private void Start()
         {
             Init();
         }
