@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65321254804756756}
   - component: {fileID: 23651630125920516}
   - component: {fileID: 114054601017797426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,4 +111,4 @@ MonoBehaviour:
   ObjectColor: {r: 0, g: 0, b: 0, a: 0}
   ObjectSpeed: 0
   ObjectHP: 0
-  PointForObject: 0
+  AwardForObject: 0

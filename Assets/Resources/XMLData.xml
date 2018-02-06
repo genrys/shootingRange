@@ -2,44 +2,44 @@
 <SpawnObjectsCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Objects>
     <SpawnObject>
-      <Type>CAPSULE</Type>
-      <Award>909</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CAPSULE</Type>
-      <Award>952</Award>
+      <Type>CIRCLE</Type>
+      <Award>677</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CIRCLE</Type>
-      <Award>950</Award>
+      <Award>79</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CIRCLE</Type>
+      <Award>699</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CAPSULE</Type>
-      <Award>637</Award>
+      <Award>465</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CIRCLE</Type>
+      <Award>944</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CIRCLE</Type>
+      <Award>673</Award>
+    </SpawnObject>
+    <SpawnObject>
+      <Type>CIRCLE</Type>
+      <Award>719</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CUBE</Type>
-      <Award>956</Award>
+      <Award>201</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CAPSULE</Type>
-      <Award>147</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CIRCLE</Type>
-      <Award>732</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CIRCLE</Type>
-      <Award>322</Award>
+      <Award>823</Award>
     </SpawnObject>
     <SpawnObject>
       <Type>CUBE</Type>
-      <Award>811</Award>
-    </SpawnObject>
-    <SpawnObject>
-      <Type>CAPSULE</Type>
-      <Award>571</Award>
+      <Award>238</Award>
     </SpawnObject>
   </Objects>
 </SpawnObjectsCollection>

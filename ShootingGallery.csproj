@@ -88,8 +88,9 @@
     <Compile Include="Assets\Scripts\Logic\Circle.cs" />
     <Compile Include="Assets\Scripts\Logic\Cube.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\UIViewManager.cs" />
     <Compile Include="Assets\Scripts\Manager\XmlManager.cs" />
-    <Compile Include="Assets\SpawnManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\XMLData.xml" />
