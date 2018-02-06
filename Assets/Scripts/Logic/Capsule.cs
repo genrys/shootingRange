@@ -14,18 +14,18 @@
             ObjectColor = Color.red;
             SetColor();
             DirectionVector = Vector3.up;
-            _jumpBoundary = 2f;
+            _jumpBoundary = 1f;
             ObjectSpeed = 0.8f;
         }
 
         public override void MoveRotation()
         {
-            if (transform.position.y > _jumpBoundary && !_isChangeDirection)
+            if (transform.localPosition.y > CurrentSpawn.TransformObject.position.y + _jumpBoundary && !_isChangeDirection)
             {
                 UpdateParameters(-Vector3.up, 0.4f);
 
             }
-            else if (transform.position.y < 1.3 && _isChangeDirection)
+            else if (transform.localPosition.y < CurrentSpawn.TransformObject.position.y + _jumpBoundary/2 && _isChangeDirection)
             {
                 UpdateParameters(Vector3.up, 0.8f);
             }

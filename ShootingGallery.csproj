@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Core\Common.cs" />
     <Compile Include="Assets\Scripts\Core\Events.cs" />
     <Compile Include="Assets\Scripts\Core\ShootObject.cs" />
+    <Compile Include="Assets\Scripts\Core\Spawn.cs" />
     <Compile Include="Assets\Scripts\Core\SpawnObjectPrefab.cs" />
     <Compile Include="Assets\Scripts\Core\Weapon.cs" />
     <Compile Include="Assets\Scripts\Logic\Capsule.cs" />

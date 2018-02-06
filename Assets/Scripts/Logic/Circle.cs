@@ -17,11 +17,11 @@
 
         public override void MoveRotation()
         {
-            if (transform.position.x < -0.25 && !_isChangeDirection)
+            if (transform.position.x < CurrentSpawn.TransformObject.position.x -0.25 && !_isChangeDirection)
             {
                 UpdateParameters(Vector3.right,0.4f);
             }
-            else if (transform.position.x > 0.25 && _isChangeDirection)
+            else if (transform.position.x > CurrentSpawn.TransformObject.position.x + 0.25 && _isChangeDirection)
             {
                 UpdateParameters(Vector3.left, 0.4f);
             }

@@ -21,6 +21,7 @@
 
             XmlManager.Init();
             SpawnManager.Init();
+            SpawnManager.InitExtendableObjectPool();
         }
     }
 }

@@ -1,16 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿namespace ShootingGallery.Core
+{
+    using UnityEngine;
 
-public class Weapon : MonoBehaviour {
+    public class Weapon : MonoBehaviour
+    {
+        #region EVENTS
+        public delegate void OnShoot();
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        public static event OnShoot Shoot;
+        #endregion
+
+    }
 }
